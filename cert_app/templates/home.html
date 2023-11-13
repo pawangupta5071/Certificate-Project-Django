@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home - Teachers and Students</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+    }
+    .navbar a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    .container {
+      width: 80%;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+      background: #f9f9f9;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    li:hover {
+      background: #e9e9e9;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'certificate_list' %}">Certificates</a>
+    <a href="{% url 'generate_certificate' %}">GENERATE CERTIFICATE</a>
+  </div>
+
+  <div class="container">
+    <h1>All Teachers</h1>
+    <ul>
+      {% for teacher in teachers %}
+        <li><a href="{% url 'students_for_teacher' teacher.id %}">{{ teacher.name }}</a></li>
+      {% endfor %}
+    </ul>
+
+    <h1>All Students</h1>
+    <ul>
+      {% for student in students %}
+        <li><a href="{% url 'teachers_for_student' student.id %}">{{ student.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</body>
+</html>
