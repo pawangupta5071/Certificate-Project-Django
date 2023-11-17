@@ -1,0 +1,6 @@
+from cert_app.views.home import home
+from cert_app.views.students_for_teacher import students_for_teacher
+from cert_app.views.teachers_for_student import teachers_for_student
+from cert_app.views.generate_certificate import generate_certificate
+from cert_app.views.certificate_list import certificate_list
+from cert_app.views.verify_certificate import verify_certificate

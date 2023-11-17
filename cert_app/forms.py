@@ -1,4 +1,3 @@
-# cert_app/forms.py
 from django import forms
 from .models import Certificate
 

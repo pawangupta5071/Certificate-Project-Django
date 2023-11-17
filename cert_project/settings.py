@@ -38,7 +38,25 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "cert_app",
+    'rest_framework',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+       'rest_framework.authentication.SessionAuthentication',
+    'rest_framework.authentication.BasicAuthentication',
+    'rest_framework_simplejwt.authentication.JWTAuthentication',
+        )
+}
+
+# JWT settings
+from datetime import timedelta
+JWT_AUTH = {
+    'JWT_EXPIRATION_DELTA': timedelta(days=3),  # Token expiration time
+    'JWT_ALLOW_REFRESH': True,
+    'JWT_REFRESH_EXPIRATION_DELTA': timedelta(days=15),  # Refresh token expiration time
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

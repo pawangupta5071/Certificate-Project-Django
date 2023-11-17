@@ -1,0 +1,61 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Certificate Project",
+    "dateExported": "2023-11-17T15:47:15.811Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "41b90cc9-b711-43b9-b845-e2ed1cfa40d8",
+            "colId": "58bf6104-2f3a-46dc-8b28-619445f3feaa",
+            "containerId": "",
+            "name": "verify-certificate",
+            "url": "http://localhost:8000/verify-certificate/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-11-17T14:57:00.992Z",
+            "modified": "2023-11-17T15:12:19.263Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAwMjM0MjIyLCJpYXQiOjE3MDAyMzM5MjIsImp0aSI6ImFjZGI5Y2EwZDQ1MTQ3Njk4ZTEyYTBkNTViOWFmNmQ0IiwidXNlcl9pZCI6MX0.jfez8BiwG9RGHd3MqEitweF3rxhMEbB-Khd7G7APoT8"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"certificate_id\": 1\r\n}\r\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "fc0f40f1-f260-4294-8d0b-0f3c43f6932c",
+            "colId": "58bf6104-2f3a-46dc-8b28-619445f3feaa",
+            "containerId": "",
+            "name": "Generate Token",
+            "url": "http://127.0.0.1:8000/api/token/",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-11-17T14:58:46.440Z",
+            "modified": "2023-11-17T15:00:05.484Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "pawan"
+                    },
+                    {
+                        "name": "password",
+                        "value": "2013"
+                    }
+                ]
+            },
+            "tests": []
+        }
+    ]
+}
